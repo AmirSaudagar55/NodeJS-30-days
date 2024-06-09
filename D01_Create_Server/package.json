@@ -1,0 +1,15 @@
+{
+  "name": "create_server",
+  "version": "1.0.0",
+  "description": "Learning about creating a server in nodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [
+    "nodeJS",
+    "server"
+  ],
+  "author": "Amir Saudagar",
+  "license": "ISC"
+}
