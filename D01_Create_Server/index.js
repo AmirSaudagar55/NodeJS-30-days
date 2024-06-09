@@ -5,10 +5,21 @@
 // 3) Make server to listen on defined port no. using listen(portno, callback) method.
 
 const http = require('http')
+const fs = require('fs')
 
-const myServer = http.createServer((req, res)=>{
+const myServer = http.createServer((req, res)=>{    //Best practice :: Dont do blocking tasks(sync task)
     console.log("request received")
-    res.end("Hello From server.")
+    
+    // console.log(req)
+    // console.log(req.headers)
+
+    //loging the requests
+    let log = `${Date.now()} : ${req.url} \t New request received from : ${req.headers.host} \n`
+
+    fs.appendFile('Logs.txt',log, (err, data)=>{
+        res.end("Your request is logged successfully !")
+    })
+
 })
 
 let portNo = 8000  // best practice : import it from .env
