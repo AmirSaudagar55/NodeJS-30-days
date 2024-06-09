@@ -14,10 +14,22 @@ const myServer = http.createServer((req, res)=>{    //Best practice :: Dont do b
     // console.log(req.headers)
 
     //loging the requests
-    let log = `${Date.now()} : ${req.url} \t New request received from : ${req.headers.host} \n`
+    let log = `${Date.now()} : ${req.url} \t New request received from : ${req.headers.host} \n`   //Browser makes extra request for favicon
 
     fs.appendFile('Logs.txt',log, (err, data)=>{
-        res.end("Your request is logged successfully !")
+        switch(req.url)
+        {
+            case '/'    :   res.end("Home page") 
+                            break
+
+            case '/about' : res.end("About us") 
+                            break
+
+            case '/contact' : res.end("Contact us ")
+                            break
+
+            default : res.end("404 not found")
+        }
     })
 
 })
