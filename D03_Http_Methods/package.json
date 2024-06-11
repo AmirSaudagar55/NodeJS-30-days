@@ -1,0 +1,17 @@
+{
+  "name": "http_methods",
+  "version": "1.0.0",
+  "description": "Studying basic http methods",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [
+    "NodeJS",
+    "node",
+    "js",
+    "http"
+  ],
+  "author": "Amir Saudagar",
+  "license": "ISC"
+}
