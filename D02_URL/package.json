@@ -1,0 +1,20 @@
+{
+  "name": "parse_url",
+  "version": "1.0.0",
+  "description": "studing url",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "nodeJS",
+    "url"
+  ],
+  "author": "Amir Saudagar",
+  "license": "ISC",
+  "dependencies": {
+    "url": "^0.11.3"
+  }
+}
