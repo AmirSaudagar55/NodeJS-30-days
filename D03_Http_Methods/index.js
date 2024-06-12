@@ -4,8 +4,10 @@
 // POST :  Creates an resources  
 // PUT :  Overwrites the existing resource
 // PATCH : use to modify the part of the resourse
+// DELETE : Use to delete the single resource
+// 
 
-// POST : n identical request creates n identical resources at server || not idempotent : same requests have different effects on server||201-> record gets created
+// POST : n identical request creates n identical resources at server || not idempotent : same requests have different effects on server||201-> record gets created || Firstly header is sent and then body in form of chunks of data (use req.on('data', chunks=>{}), req.on('end', (error)=>{}))
 // PUT :  n identical request creates a single resource and modify each time || Idempotent : Same requests have same effects on server  || 200-> record get updated
 
 //get and post method for form submsiion :: 
