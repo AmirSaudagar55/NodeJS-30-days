@@ -1,0 +1,15 @@
+{
+  "name": "assigment_1",
+  "version": "1.0.0",
+  "description": "ToDo Routes handling",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [
+    "nodeJS",
+    "todo"
+  ],
+  "author": "Amir Saudagar",
+  "license": "ISC"
+}
