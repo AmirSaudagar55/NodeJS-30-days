@@ -1,0 +1,19 @@
+{
+  "name": "simple_api",
+  "version": "1.0.0",
+  "description": "Creating REST API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [
+    "nodeJS",
+    "rest",
+    "api"
+  ],
+  "author": "Amir Saudagar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
