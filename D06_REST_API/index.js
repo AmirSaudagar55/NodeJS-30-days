@@ -26,3 +26,30 @@
 
 
 
+const express = require('express')
+
+const app = express()
+
+const users = {
+    id : 123,
+    name : "ABC",
+    address : "XYZ street"
+}
+
+app.get('/users', (req, res)=>{
+    console.log("Request received on /user ! ")
+    const user = `<h1> id : ${users.id} </h1>
+    <h2>Name : ${users.name}</h2>
+    <h2>Address : ${users.address}</h2>`
+    res.send(user)
+})
+
+app.get('/api/users', (req, res)=>{
+    console.log("Request received on /api/users ! ")
+    res.json(users)
+})
+
+app.listen(8000, ()=>{
+    console.log("Listening on port 8000")
+})
+
