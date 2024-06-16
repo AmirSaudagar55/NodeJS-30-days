@@ -1,0 +1,5 @@
+Postman is API testing tool which also helps in documentation.
+It allows to handle multiple http request, has broad formate to be sent in body of request.
+
+
+Further part is continued in D07_A_REST_API\index.js
