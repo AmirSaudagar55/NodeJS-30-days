@@ -107,7 +107,21 @@ app.patch("/api/users/:id", (req, res)=>{
   
 })
 
+app.delete("/api/users/:id", (req, res)=>{
+  const id = req.params.id
 
+  const index = data.findIndex(user => user.id == id);
+
+  
+  if (index !== -1) {
+    data.splice(index, 1);
+    console.log("Deleted Successfully");
+    res.end("Deleted successfully");
+  } else {
+    
+    res.send("User not found");
+  }
+})
 
 app.get(`/api/users/:id`, (req, res) => {
   const id = req.params.id;
