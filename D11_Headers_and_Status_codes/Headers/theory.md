@@ -6,7 +6,7 @@ HTTP headers are additional information passed with requests and responses. They
 
 ### 1. Request Headers
 Request headers contain information about the resource to be fetched or the client requesting the resource.
-
+![Http Request Message Format](https://github.com/AmirSaudagar55/NodeJS-30-days/blob/7caeb84a2c1c09dff81a979575f17818af8f30dd/D11_Headers_and_Status_codes/Headers/Http_Request_Message_Format.png)
 Example:
 ```json
 {
@@ -20,7 +20,7 @@ Example:
 
 ### 2. Response Headers
 Response headers contain information about the resource being sent or the server sending the response.
-
+![Http Response Message Format](https://github.com/AmirSaudagar55/NodeJS-30-days/blob/7caeb84a2c1c09dff81a979575f17818af8f30dd/D11_Headers_and_Status_codes/Headers/Http_Response_Message_Structure.png)
 Example:
 ```
 x-powered-by: Express
@@ -41,5 +41,21 @@ To set a custom header, use the `setHeader(headerName, headerValue)` method. Cus
 
 Example:
 ```javascript
-setHeader('X-Custom-Header', 'customValue');
+//setHeader('X-Custom-Header', 'customValue');
+
+const express = require('express')
+const app = express()
+
+app.get("/", (req, res)=>{
+    console.log(req.headers)
+    res.setHeader("X-MyName", "Amir Saudagar") //Custom header
+    res.send("Home Page")
+})
+
+
+app.listen(8000, ()=>{
+    console.log("Server is listening on the port 8000")
+})
 ```
+
+![Custom Header in Response header](https://github.com/AmirSaudagar55/NodeJS-30-days/blob/7caeb84a2c1c09dff81a979575f17818af8f30dd/D11_Headers_and_Status_codes/Headers/Http_Response_Message_Structure.png)
