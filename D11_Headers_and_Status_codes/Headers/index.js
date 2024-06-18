@@ -3,6 +3,7 @@ const app = express()
 
 app.get("/", (req, res)=>{
     console.log(req.headers)
+    res.setHeader("X-MyName", "Amir Saudagar") //Custom header
     res.send("Home Page")
 })
 
