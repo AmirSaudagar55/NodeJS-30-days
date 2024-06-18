@@ -58,4 +58,4 @@ app.listen(8000, ()=>{
 })
 ```
 
-![Custom Header in Response header](https://github.com/AmirSaudagar55/NodeJS-30-days/blob/7caeb84a2c1c09dff81a979575f17818af8f30dd/D11_Headers_and_Status_codes/Headers/Http_Response_Message_Structure.png)
+![Custom Header in Response header](https://github.com/AmirSaudagar55/NodeJS-30-days/blob/adcbe938ee6c413420215f2973118f685947b821/D11_Headers_and_Status_codes/Headers/custom_header.jpg)
