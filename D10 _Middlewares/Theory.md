@@ -2,6 +2,8 @@
 
 Middleware functions are the functions that have access to request, response object and the next middleware function in the application's request-response cycle. The next middleware function is commonly denoted by the `next` variable.
 
+![Middleware Architecture](https://github.com/AmirSaudagar55/NodeJS-30-days/blob/7348d71d0f71ef72cd945423fd8f8e8f559fd3cf/D10%20_Middlewares/middleware.drawio.png)
+
 Middleware functions can perform the following tasks:
 1. Execute any code
 2. Make changes to the request and response objects
@@ -143,6 +145,8 @@ app.listen(8000, ()=>{
 - Takes 4 arguments (err, req, res, next)
 - Always added to end of middleware stack
 -Errors can accessed using err.stack
+
+![Middleware Architecture](https://github.com/AmirSaudagar55/NodeJS-30-days/blob/7348d71d0f71ef72cd945423fd8f8e8f559fd3cf/D10%20_Middlewares/Error_handler_middleware.jpg)
 example:
 ```javascript
 const express = require('express');
