@@ -193,6 +193,6 @@ app.listen(8000, () => {
 
 
 
-Some other :
+Some other points:
 If we have same global middlware using app and route then app's middleware will execute.
 If we have same route handler using app and router then first app's will execute and then router's execute.
