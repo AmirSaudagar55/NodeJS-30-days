@@ -190,3 +190,9 @@ app.listen(8000, () => {
 
 ### 5. Third-Party Middleware
 - E.g Cookie-parser
+
+
+
+Some other :
+If we have same global middlware using app and route then app's middleware will execute.
+If we have same route handler using app and router then first app's will execute and then router's execute.
