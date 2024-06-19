@@ -1,0 +1,19 @@
+{
+  "name": "status_codes",
+  "version": "1.0.0",
+  "description": "Learning about Status Code",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [
+    "NodeJS",
+    "status",
+    "code"
+  ],
+  "author": "Amir Saudagar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
