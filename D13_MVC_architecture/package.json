@@ -1,0 +1,20 @@
+{
+  "name": "mvc",
+  "version": "1.0.0",
+  "description": "Formatting the code in MVC style",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "keywords": [
+    "NodeJS",
+    "MVC"
+  ],
+  "author": "Amir Saudagar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.3",
+    "nodemon": "^3.1.4"
+  }
+}
