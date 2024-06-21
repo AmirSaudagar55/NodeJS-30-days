@@ -1,0 +1,22 @@
+{
+  "name": "urlshortner",
+  "version": "1.0.0",
+  "description": "A service that return short url for provided url",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "keywords": [
+    "NodeJS",
+    "url",
+    "shortner"
+  ],
+  "author": "Amir Saudagar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.3",
+    "nodemon": "^3.1.4",
+    "shortid": "^2.2.16"
+  }
+}
