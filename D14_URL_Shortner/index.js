@@ -4,7 +4,7 @@ const router = require('./Routes/url.js')
 const app = express()
 
 
-mongoose.connect("mongodb+srv://saudagaramir55:123@cluster0.oksg8hd.mongodb.net/NodeJS30?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("Connection String")
 .then(()=>{
     console.log("! MongoDB connected")
 })
