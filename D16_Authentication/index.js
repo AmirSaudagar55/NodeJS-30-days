@@ -1,7 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
-const router = require('./Routes/url.js')
+const urlRouter = require('./Routes/url.js')
+const userRouter = require ('./Routes/user.js')
 var cookieParser = require('cookie-parser')
 const app = express()
 
@@ -20,7 +21,9 @@ app.use(cookieParser())
 
 app.set("view engine", "ejs")
 app.set("views", path.resolve("./Views"))
-app.use("/url", router);
+
+app.use("/url", urlRouter);
+app.use("/user", userRouter);
 
 app.listen(8000, ()=>{
     console.log("Server is listening on port 8000.")

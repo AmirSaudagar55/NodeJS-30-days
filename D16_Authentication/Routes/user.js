@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const User = require("../Model")
+const User = require("../Model/User")
 const { v4 : uuidv4 } = require('uuid')  
 
 router.post('/signup',async (req,res)=>{
@@ -20,7 +20,35 @@ router.post('/signup',async (req,res)=>{
 
     if(user)
     {
-        res.staus(201).render('home')
+        res.status(201).render('home')
+    }
+    else{
+        const err = {
+            msg : "Error while creating a user",
+            route : "/user/signup",
+            controller : "handleCreateUser"
+        }
+        res.status(500).json({err})
+        console.log(err)
+    }
+})
+
+router.post('/login',async (req,res)=>{
+    const email = req.body.email;
+    const password = req.body.password;
+
+    const uid = uuidv4()
+
+    const user = await User.create({
+        email : email,
+        password : password
+    })
+
+    console.log(user)
+
+    if(user)
+    {
+        res.status(201).render('home')
     }
     else{
         const err = {
@@ -36,3 +64,5 @@ router.post('/signup',async (req,res)=>{
 router.get('/', (req, res)=>{
         res.status(200).render("signup")
 })
+
+module.exports = router;
