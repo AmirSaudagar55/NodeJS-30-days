@@ -17,7 +17,8 @@ async function handleCreateShortURL(req, res){
 
     const shortURL = await URL.create({
         shortID : id,
-        originalURL : givenURL
+        originalURL : givenURL,
+        createdBy : req.user._id
     })
 
     res.status(201).render("home",{id : shortURL.shortID, doc : shortURL, urls : urls})

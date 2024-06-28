@@ -1,5 +1,17 @@
 const { v4 : uuidv4 } = require('uuid')  
+const getUser = require("../")
 
-function auth(req, res, next){
-    
+function restrictToUserLoginOnly(req, res, next){
+    const userUid = req.cookies?.uid;
+
+    if(!userUid) return res.redirect("/user/login")
+    const user = getUser(userUid);
+
+    if(!user) return res.redirect("/user/login")
+
+    req.user = user
+
+    next()
 }
+
+module.exports = restrictToUserLoginOnly

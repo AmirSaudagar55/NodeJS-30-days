@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 const path = require('path')
 const urlRouter = require('./Routes/url.js')
 const userRouter = require ('./Routes/user.js')
-var cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser')
+const {restrictToUserLoginOnly} = require('./Middleware/Auth.js')
 const app = express()
 
 
@@ -22,7 +23,7 @@ app.use(cookieParser())
 app.set("view engine", "ejs")
 app.set("views", path.resolve("./Views"))
 
-app.use("/url", urlRouter);
+app.use("/url",restrictToUserLoginOnly, urlRouter);
 app.use("/user", userRouter);
 
 app.listen(8000, ()=>{
