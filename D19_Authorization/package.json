@@ -1,0 +1,22 @@
+{
+  "name": "authorization",
+  "version": "1.0.0",
+  "description": "Learning about authorization.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "keywords": [
+    "Node",
+    "js",
+    "authorization"
+  ],
+  "author": "Amir Saudagar",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
