@@ -1,0 +1,20 @@
+{
+  "name": "fileupload",
+  "version": "1.0.0",
+  "description": "Learning how to upload file on server using multer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "multer",
+    "nodeJS"
+  ],
+  "author": "Amir Saudagar",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
